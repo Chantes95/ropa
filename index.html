@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personalización de Prenda</title>
+    <style>
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 200px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content img {
+            width: 50px;
+            height: 50px;
+            margin-right: 10px;
+            vertical-align: middle;
+        }
+
+        .dropdown-content div {
+            padding: 12px 16px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+        }
+
+        .dropdown-content div:hover {
+            background-color: #f1f1f1;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        #selectedPrenda {
+            display: inline-block;
+            padding: 10px;
+            cursor: pointer;
+            background-color: #e2e2e2;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Personaliza tu prenda</h1>
+
+<div class="dropdown">
+    <div id="selectedPrenda">Selecciona una prenda</div>
+    <div class="dropdown-content">
+        <div data-prenda="prenda1.png">
+            <img src="gal/CHALECOPERIODICO.png" alt="Prenda 1"> Prenda 1
+        </div>
+        <div data-prenda="prenda2.png">
+            <img src="gal/LNE-AZULAZERO.JPG" alt="Prenda 2"> Prenda 2
+        </div>
+        <div data-prenda="prenda3.png">
+            <img src="gal/TQ_AZULACERO.JPG" alt="Prenda 3"> Prenda 3
+        </div>
+    </div>
+</div>
+
+<canvas id="canvas" width="400" height="600"></canvas>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fabric.js/4.6.0/fabric.min.js"></script>
+<script src="js/prenda.js"></script>
+
+</body>
+</html>
